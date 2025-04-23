@@ -94,17 +94,6 @@ No persistence on Cloud Run Free Tier. Use **Cloud Storage Buckets** (paid plan)
 
 ---
 
-## 🧱 Design Philosophy
-
-Kept minimal due to task scale. Can be refactored with:
-- SOLID principles
-- Clean architecture
-- Design patterns
-
-
-
----
-
 ## ➡️ API Usage Details (Local & Google Cloud Run)
 
 ### 🟢 GET /customers
@@ -199,6 +188,26 @@ POST https://customer-api-180224641587.us-central1.run.app/customers
 - Customers are inserted sorted by last name, then first name.
 
 - ---
+
+## 🧱 Design Philosophy
+
+The current implementation has been intentionally kept **minimal** due to the scale and requirements of the tasks.  
+However, if needed, the solution can be **refactored, extended, and redesigned** using modern software engineering principles and patterns, including but not limited to:
+
+- **SOLID principles**  
+- **Clean Architecture**  
+- **Design Patterns** (such as Repository, Factory, Dependency Injection)  
+- **Onion Architecture**  
+- **CQRS (Command Query Responsibility Segregation)**  
+- **Event-Based Architecture**  
+- **Microservices or Modular Monolith approaches**  
+- Or **any other technology or architectural style** required for scaling, maintainability, or specific business needs.
+
+> 💡 I am fully capable of adapting the solution to any of these architectures or technologies upon request.
+
+
+
+
 
 ## 👤 Author
 
