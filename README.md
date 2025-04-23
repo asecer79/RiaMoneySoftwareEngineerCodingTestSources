@@ -42,8 +42,8 @@ Minimal API developed in .NET 9 for managing customer records.
 
 ### Build and Run Instructions:
 ```bash
-docker build -t task3-customer-api .
-docker run -d -p 8080:80 --name task3-customer-api-container task3-customer-api
+docker build -t Task2_MinimalRestApi_CustomerManager .
+docker run -d -p 8080:80 --name Task2_MinimalRestApi_CustomerManager-container Task2_MinimalRestApi_CustomerManager
 ```
 
 API URL: `http://localhost:8080/customers`
@@ -68,9 +68,9 @@ https://customer-api-180224641587.us-central1.run.app/customers
 
 ### Deployment Commands (Used on Google Cloud Console):
 ```bash
-docker build -t gcr.io/your-project-id/customer-api .
-docker push gcr.io/your-project-id/customer-api
-gcloud run deploy customer-api   --image gcr.io/your-project-id/customer-api   --platform managed   --region us-central1   --allow-unauthenticated
+docker build -t gcr.io/180224641587/Task2_MinimalRestApi_CustomerManager .
+docker push gcr.io/180224641587/customer-api
+gcloud run deploy customer-api   --image gcr.io/180224641587/Task2_MinimalRestApi_CustomerManager   --platform managed   --region us-central1   --allow-unauthenticated
 ```
 
 ### Persistence Notice:
