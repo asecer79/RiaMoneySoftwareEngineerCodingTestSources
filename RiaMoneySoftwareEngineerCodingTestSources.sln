@@ -11,6 +11,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ExtrasBonus", "ExtrasBonus"
 	ProjectSection(SolutionItems) = preProject
 		..\..\..\Desktop\RiaProject\DockerCustomerApiProject\Task3_DockerCustomerApiProject.rar = ..\..\..\Desktop\RiaProject\DockerCustomerApiProject\Task3_DockerCustomerApiProject.rar
 		..\..\..\Desktop\RiaProject\Task4_GoogleCloudDeploymentURL.docx = ..\..\..\Desktop\RiaProject\Task4_GoogleCloudDeploymentURL.docx
+		TextFile2.txt = TextFile2.txt
 	EndProjectSection
 EndProject
 Global
