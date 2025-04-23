@@ -50,7 +50,7 @@ API URL: `http://localhost:8080/customers`
 
 #### Persistent Storage (Optional):
 ```bash
-docker run -d -p 8080:80   -v $(pwd)/customers.json:/app/customers.json   --name task3-customer-api-container task3-customer-api
+docker run -d -p 8080:80   -v $(pwd)/customers.json:/app/customers.json   --name Task2_MinimalRestApi_CustomerManager-container Task2_MinimalRestApi_CustomerManager
 ```
 
 ---
