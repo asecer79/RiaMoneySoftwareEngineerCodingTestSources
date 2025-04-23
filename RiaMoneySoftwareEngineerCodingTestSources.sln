@@ -7,14 +7,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Task1_DenominationRoutine",
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Task2_MinimalRestApi_CustomerManager", "Task2_MinimalRestApi_CustomerManager\Task2_MinimalRestApi_CustomerManager.csproj", "{1D38889E-8D35-43D6-B908-13E169FF8098}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Task3_DockerForContainerMinimalApi", "Task3_DockerForContainerMinimalApi", "{02EA681E-C7D8-13C7-8484-4AC65E1B71E8}"
-	ProjectSection(SolutionItems) = preProject
-		..\..\..\Desktop\RiaProject\DockerCustomerApiProject\0-BuildCommand.txt = ..\..\..\Desktop\RiaProject\DockerCustomerApiProject\0-BuildCommand.txt
-		..\..\..\Desktop\RiaProject\DockerCustomerApiProject\CustomerApi.csproj = ..\..\..\Desktop\RiaProject\DockerCustomerApiProject\CustomerApi.csproj
-		..\..\..\Desktop\RiaProject\DockerCustomerApiProject\Dockerfile = ..\..\..\Desktop\RiaProject\DockerCustomerApiProject\Dockerfile
-		..\..\..\Desktop\RiaProject\DockerCustomerApiProject\Program.cs = ..\..\..\Desktop\RiaProject\DockerCustomerApiProject\Program.cs
-	EndProjectSection
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
