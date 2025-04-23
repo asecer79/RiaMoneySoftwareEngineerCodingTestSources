@@ -107,4 +107,99 @@ Kept minimal due to task scale. Can be refactored with:
 
 **Aydın Seçer**  
 📧 asecer@yildiz.edu.tr  
-🔗 GitHub: [github.com/asecer79](https://github.com/asecer79)
+🔗 GitHub: [github.com/aydinsecer](https://github.com/aydinsecer)
+
+---
+
+## ➡️ API Usage Details (Local & Google Cloud Run)
+
+### 🟢 GET /customers
+Retrieve all customer records.
+
+#### ✅ Local Example:
+```
+GET http://localhost:8080/customers
+```
+
+#### ✅ Cloud Run Example:
+```
+GET https://customer-api-180224641587.us-central1.run.app/customers
+```
+
+#### 📤 Example Response:
+```json
+[
+  {
+    "firstName": "John",
+    "lastName": "Doe",
+    "age": 28,
+    "id": 1
+  },
+  {
+    "firstName": "Jane",
+    "lastName": "Smith",
+    "age": 35,
+    "id": 2
+  }
+]
+```
+
+---
+
+### 🟠 POST /customers
+Add new customers with validation.
+
+#### ✅ Local Example:
+```
+POST http://localhost:8080/customers
+```
+
+#### ✅ Cloud Run Example:
+```
+POST https://customer-api-180224641587.us-central1.run.app/customers
+```
+
+#### 📥 Example Request Body (JSON):
+```json
+[
+  {
+    "firstName": "Alice",
+    "lastName": "Johnson",
+    "age": 25,
+    "id": 3
+  },
+  {
+    "firstName": "Bob",
+    "lastName": "Williams",
+    "age": 40,
+    "id": 4
+  }
+]
+```
+
+#### 🟢 Successful Response:
+```json
+{
+  "added": 4,
+  "errors": []
+}
+```
+
+#### ❌ Error Response Example (if validation fails):
+```json
+{
+  "added": 4,
+  "errors": [
+    "Customer under 18: Alice Johnson",
+    "Duplicate ID: 2"
+  ]
+}
+```
+
+---
+
+### ⚠️ Validation Rules:
+- All fields (`firstName`, `lastName`, `age`, `id`) are required.
+- `age` must be 18 or older.
+- `id` must be unique.
+- Customers are inserted sorted by last name, then first name.
