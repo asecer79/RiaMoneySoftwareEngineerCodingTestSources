@@ -89,4 +89,4 @@ These projects are intentionally kept minimal. SOLID principles or design patter
 
 **Aydın Seçer**  
 📧 asecer@yildiz.edu.tr  
-🔗 [github.com/aydinsecer](https://github.com/aydinsecer)
+🔗 [github.com/aydinsecer](https://github.com/asecer79)
