@@ -1,11 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.13.35931.197 d17.13
+VisualStudioVersion = 17.13.35931.197
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Task1_DenominationRoutine", "Task1_DenominationRoutine\Task1_DenominationRoutine.csproj", "{B92BB0CD-EBAE-42FF-AD58-DC1C8302EE74}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Task2_MinimalRestApi_CustomerManager", "Task2_MinimalRestApi_CustomerManager\Task2_MinimalRestApi_CustomerManager.csproj", "{1D38889E-8D35-43D6-B908-13E169FF8098}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "d", "d", "{02EA681E-C7D8-13C7-8484-4AC65E1B71E8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
