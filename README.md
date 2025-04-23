@@ -107,4 +107,4 @@ Kept minimal due to task scale. Can be refactored with:
 
 **Aydın Seçer**  
 📧 asecer@yildiz.edu.tr  
-🔗 GitHub: [github.com/aydinsecer](https://github.com/aydinsecer)
+🔗 GitHub: [github.com/aydinsecer](https://github.com/asecer79)
