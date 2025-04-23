@@ -1,6 +1,10 @@
-﻿
+﻿I have deployed the Customer API to Google Cloud Run. 
+
 Google Cloud Run URL for the Customer API is:
 
 https://customer-api-180224641587.us-central1.run.app/customers
 
 please use postman for test.
+
+
+Note: I couldn't make customers.json persistent on Cloud Run because I couldn't purchase a bucket, but I could easily do it with the paid version.
