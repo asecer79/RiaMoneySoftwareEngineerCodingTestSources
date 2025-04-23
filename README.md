@@ -101,13 +101,7 @@ Kept minimal due to task scale. Can be refactored with:
 - Clean architecture
 - Design patterns
 
----
 
-## 👤 Author
-
-**Aydın Seçer**  
-📧 asecer@yildiz.edu.tr  
-🔗 GitHub: [github.com/aydinsecer](https://github.com/aydinsecer)
 
 ---
 
@@ -203,3 +197,11 @@ POST https://customer-api-180224641587.us-central1.run.app/customers
 - `age` must be 18 or older.
 - `id` must be unique.
 - Customers are inserted sorted by last name, then first name.
+
+- ---
+
+## 👤 Author
+
+**Aydın Seçer**  
+📧 asecer@yildiz.edu.tr  
+🔗 GitHub: [github.com/asecer79](https://github.com/asecer79)
