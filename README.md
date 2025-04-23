@@ -1,87 +1,105 @@
-# 🧩 Project Collection: Backend Development Tasks
+# 🧩 Backend Development Task Collection
 
-This repository contains four backend-focused tasks, each addressing different aspects of algorithmic problem-solving, API development, containerization, and deployment.
+This repository includes four backend-focused tasks, each demonstrating different concepts: algorithmic logic, REST API development, Dockerization, and deployment using Google Cloud Run.
+
+---
+
+## 📂 Project Structure
+
+```
+/Task1_DenominationRoutine/          # ATM payout calculation routine (C# Console App)
+/Task2_MinimalRestApi_CustomerManager/  # Minimal REST API with customer validation
+/Task3_Dockerize/                    # Dockerization of the Customer Manager API
+/Task4_Google_CloudDeployment/       # Deployment details and Cloud Run service URL
+```
 
 ---
 
 ## 🟦 Task 1 - Denomination Routine
-A C# console application that calculates all valid payout combinations using ATM denominations:
+
+A C# console application that calculates valid ATM payout combinations using denominations:
 - 10 EUR
 - 50 EUR
 - 100 EUR
 
-Sample amounts include: 30 EUR, 50 EUR, 60 EUR, 80 EUR, up to 980 EUR.
+### Features:
+- Calculates payout options for amounts like 30, 50, 60, up to 980 EUR.
+- Outputs sorted combinations.
 
 ---
 
 ## 🟩 Task 2 - Minimal REST API (Customer Manager)
-Minimal API developed in .NET 9 for managing customer records.
+
+.NET 9 Minimal API to manage customer records.
 
 ### Features:
 - `GET /customers`: List all customers.
 - `POST /customers`: Add customers with validation:
-  - Fields required: `FirstName`, `LastName`, `Age`, `Id`
-  - Age must be 18+
-  - IDs must be unique
-  - Sorted insertion by `LastName`, then `FirstName`
-- Uses `customers.json` as the local data store.
-- Swagger UI enabled for testing.
+  - Fields: `FirstName`, `LastName`, `Age`, `Id`
+  - Age ≥ 18, IDs unique, sorted by `LastName`, then `FirstName`
+- Local data: `customers.json`
+- Swagger UI enabled.
 
 ---
 
-## 🐳 Task 3 - Dockerization: Minimal Customer API
+## 🐳 Task 3 - Dockerization of Customer Manager API
 
-### Project Structure:
+Containerizes the Customer Manager API from Task 2.
+
+### Structure:
 ```
-/0-BuildCommand.txt          # Build and run instructions
-/Dockerfile                  # Dockerfile for containerization
-/Program.cs                  # Main API logic (Minimal API)
-/Task3_Dockerize.csproj      # Project file
-/customers.json              # Local JSON data store
+/0-BuildCommand.txt
+/Dockerfile
+/Program.cs
+/Task3_Dockerize.csproj
+/customers.json
 ```
 
-### Build and Run Instructions:
+### Build and Run:
 ```bash
-docker build -t Task2_MinimalRestApi_CustomerManager .
-docker run -d -p 8080:80 --name Task2_MinimalRestApi_CustomerManager-container Task2_MinimalRestApi_CustomerManager
+docker build -t task3-customer-api .
+docker run -d -p 8080:80 --name task3-customer-api-container task3-customer-api
 ```
-
-API URL: `http://localhost:8080/customers`
-
-#### Persistent Storage (Optional):
+Optional persistent mount:
 ```bash
-docker run -d -p 8080:80   -v $(pwd)/customers.json:/app/customers.json   --name Task2_MinimalRestApi_CustomerManager-container Task2_MinimalRestApi_CustomerManager
+docker run -d -p 8080:80 -v $(pwd)/customers.json:/app/customers.json --name task3-customer-api-container task3-customer-api
 ```
 
 ---
 
 ## ☁️ Task 4 - Google Cloud Deployment
 
-The Dockerized Minimal REST API was deployed to **Google Cloud Run**.
+Deployed on **Google Cloud Run**, project ID:
 
-### 🌐 Deployment URL:
+```
+customer-api-180224641587
+```
+
+### Deployment URL:
 ```
 https://customer-api-180224641587.us-central1.run.app/customers
 ```
 
-> Please use **Postman** for testing.
+Test using Postman.
 
-### Deployment Commands (Used on Google Cloud Console):
+### Deployment Steps:
 ```bash
-docker build -t gcr.io/180224641587/Task2_MinimalRestApi_CustomerManager .
-docker push gcr.io/180224641587/customer-api
-gcloud run deploy customer-api   --image gcr.io/180224641587/Task2_MinimalRestApi_CustomerManager   --platform managed   --region us-central1   --allow-unauthenticated
+docker build -t gcr.io/customer-api-180224641587/customer-api .
+docker push gcr.io/customer-api-180224641587/customer-api
+gcloud run deploy customer-api   --image gcr.io/customer-api-180224641587/customer-api   --platform managed   --region us-central1   --allow-unauthenticated
 ```
 
-### Persistence Notice:
-I couldn't make `customers.json` persistent on Cloud Run because I couldn't purchase a bucket, but I could easily do it with the paid version.  
-Recommended solution: **Google Cloud Storage Buckets**.
+### Persistence Note:
+No persistence on Cloud Run Free Tier. Use **Cloud Storage Buckets** (paid plan) for persistent data.
 
 ---
 
 ## 🧱 Design Philosophy
-These projects are intentionally kept minimal. SOLID principles or design patterns (Repository, Factory, Dependency Injection) were not applied due to project scope.  
-> If required, I am ready to restructure the code with any desired software architecture.
+
+Kept minimal due to task scale. Can be refactored with:
+- SOLID principles
+- Clean architecture
+- Design patterns
 
 ---
 
@@ -89,4 +107,4 @@ These projects are intentionally kept minimal. SOLID principles or design patter
 
 **Aydın Seçer**  
 📧 asecer@yildiz.edu.tr  
-🔗 [github.com/aydinsecer](https://github.com/asecer79)
+🔗 GitHub: [github.com/aydinsecer](https://github.com/aydinsecer)
