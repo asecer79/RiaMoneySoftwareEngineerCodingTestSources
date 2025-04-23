@@ -1,0 +1,6 @@
+﻿
+Google Cloud Run URL for the Customer API is:
+
+https://customer-api-180224641587.us-central1.run.app/customers
+
+please use postman for test.
